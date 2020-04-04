@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Baloo Thambi 2', cursive;
+}
+::placeholder {
+    font-size: 16px;
+}
+section {
+    text-align: center;
+    
+    background-repeat: no-repeat;
+    background-size: cover;  
+    position: relative;
+    z-index:1;
+    overflow:hidden
+}
+
+section::before {
+    z-index:-1;
+    position: fixed;
+    left:0;
+    top:0;
+    content: url('https://iso.500px.com/wp-content/uploads/2016/04/stock-photo-150595123.jpg');
+    background-size: cover;
+    opacity:0.5;
+   
+}
+#title {
+    padding-top: 50px;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+#description {
+    padding: 10px 0 30px 0;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.forw-wrapp {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 40px 40px;
+    background-color:rgba(238, 85, 85, 0.5);
+    border-radius: 10px;
+}
+#survey-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+#survey-form  p , label{
+    align-self: flex-start;
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 2px;
+}
+label[for=favorite-feature],
+label[for=comment] {
+    padding-top: 16px;
+}
+#name, 
+#email, 
+#number, 
+#current-role, 
+#favorite-feature {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 16px;
+}
+select {
+    font-size: 16px;
+}
+textarea {
+    text-size-adjust: none;
+    padding: 15px;
+    max-width: 100%;
+    min-height: 15vh;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+input[type=radio], input[type=checkbox] {
+    min-width: 16px;
+    min-height: 16px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+input[type=submit] {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(64, 167, 64);
+    border: none;
+    border-radius: 5px;
+}
